@@ -1,0 +1,6 @@
+# action.yaml
+name: 'SnowSQL Formatter Action'
+description: 'Format snowflake sql on push to repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

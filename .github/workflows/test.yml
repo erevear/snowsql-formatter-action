@@ -1,0 +1,29 @@
+on: [push]
+
+jobs:
+  custom_test:
+    runs-on: ubuntu-latest
+    # name: Snowsql Test
+    # steps:
+    #   - name: Checkout
+    #     uses: actions/checkout@v2
+    #     with:
+    #       fetch-depth: 0
+
+    #   - name: Setup NodeJS 14
+    #     uses: actions/setup-node@v1
+    #     with:
+    #       node-version: 14
+    steps:
+      - name: Testing
+        uses: ./
+      - name: WHY
+        run: echo "woooork"
+      # Checkout the source code so we have some files to look at.
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      #   with:
+      #     fetch-depth: 0
+      # Run the reformat action
+      # - name: Reformat SQL Files
+      #   uses: evarevear/snowsql-formatter-action@master
