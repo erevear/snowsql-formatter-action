@@ -16,7 +16,7 @@ jobs:
     #       node-version: 14
     steps:
       - name: Testing
-        uses: evarevear/snowsql-formatter-action@master
+        uses: evarevear/snowsql-formatter-action@main
       - name: WHY
         run: echo "woooork"
       # Checkout the source code so we have some files to look at.
