@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 echo "whyyyy"
-sh -c "hello test.sql -o test.sql"
+
+# bash -c "sql-formatter -h"
+bash -c "hello test.sql"
 # for file in `find . -name '*.sql'`; do
 #     echo 'running'
 #     hello $file -o $file

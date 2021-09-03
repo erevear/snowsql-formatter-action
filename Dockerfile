@@ -10,7 +10,9 @@ RUN apt-get update \
 
 WORKDIR /usr/app
 
-RUN npm i snowsql-formatter-cli
+RUN npm install snowsql-formatter-cli -g
+
+# RUN npm install sql-formatter -g
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
 
