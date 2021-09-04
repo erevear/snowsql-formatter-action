@@ -22,8 +22,8 @@ jobs:
           token: ${{ github.token }}
       - name: Testing
         uses: evarevear/snowsql-formatter-action@main
-      - name: WHY
-        run: echo "woooork"
+      # - name: WHY
+      #   run: echo "woooork"
       - name: Commit files
         run: |
           git config --local user.email "<githubusername>@users.noreply.github.com"
