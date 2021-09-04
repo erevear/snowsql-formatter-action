@@ -30,7 +30,7 @@ jobs:
           git config --local user.name "SQL Reformat Bot"
           git commit --all -m"Reformat SQL Files to common format." || true
       - name: Push
-        run: git push "https://${{github.actor}}:${{secrets.SOURCE_PUSH_TOKEN}}@github.com/${{github.repository}}.git" "HEAD:${{ env.GIT_BRANCH }}"
+        run: git push "https://${{github.actor}}:${{secrets.SOURCE_PUSH_TOKEN}}@github.com/${{github.repository}}.git" "${{ env.GIT_BRANCH }}"
       
 
       # Checkout the source code so we have some files to look at.
