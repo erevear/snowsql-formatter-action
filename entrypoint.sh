@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-echo "whyyyy"
+echo $GITHUB_WORKSPACE
 
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
