@@ -7,6 +7,6 @@ echo "whyyyy"
 # for file in `find . -name '*.sql'`; do
 for file in 'find ./ -iname '*.sql' -type f'; do
     echo "running"
-    hello $file
+    echo $file
     # hello $file -o $file
 done
