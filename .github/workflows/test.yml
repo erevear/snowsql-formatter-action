@@ -24,9 +24,9 @@ jobs:
         run: |
           sudo apt-get update \
           && sudo apt-get install -y curl \
-          && sudo curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+          && curl -sL https://deb.nodesource.com/setup_14.x | sudo bash - \
           && sudo apt-get install -y nodejs \
-          && sudo scurl -L https://www.npmjs.com/install.sh | sh
+          && scurl -L https://www.npmjs.com/install.sh | sudo sh
       - name: install snowsql tool
         run: |
           npm install snowsql-formatter-cli -g
