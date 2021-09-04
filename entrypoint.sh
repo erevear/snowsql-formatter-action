@@ -17,4 +17,8 @@ for file in `find ./ -iname '*.sql' -type f`; do
     # hello $file -o $file
 done
 
-git status
+cd ${INPUT_DIRECTORY}
+
+remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
+
+git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION $_TAGS;
