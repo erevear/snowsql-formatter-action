@@ -2,7 +2,7 @@
 set -e
 echo --recursive $GITHUB_WORKSPACE $*
 echo ${INPUT_DIRECTORY:-'.'}
-FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
+# FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
 for file in `find . -name '*.sql'`; do
