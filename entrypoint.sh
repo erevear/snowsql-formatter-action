@@ -16,3 +16,5 @@ for file in `find ./ -iname '*.sql' -type f`; do
     echo $file -o $file
     # hello $file -o $file
 done
+
+git status
