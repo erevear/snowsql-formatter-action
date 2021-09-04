@@ -8,7 +8,7 @@ echo ${INPUT_DIRECTORY:-'.'}
 for file in `find . -name '*.sql'`; do
     echo "running"
     echo $file
-    hello $file
+    hello $file -o $file
 done 
 
 for file in `find ./ -iname '*.sql' -type f`; do
