@@ -20,6 +20,16 @@ jobs:
         with:
           repository: ${{ github.repository }}
           token: ${{ github.token }}
+      - name: Install npm
+        run: |
+          RUN apt-get update \
+          && apt-get install -y curl \
+          && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+          && apt-get install -y nodejs \
+          && curl -L https://www.npmjs.com/install.sh | sh
+      - name: install snowsql tool
+        run: |
+          npm install snowsql-formatter-cli -g
       - name: Testing
         uses: evarevear/snowsql-formatter-action@main
       - name: WHY
