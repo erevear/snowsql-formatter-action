@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 echo --recursive $GITHUB_WORKSPACE $*
+echo ${INPUT_DIRECTORY:-'.'}
 
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
