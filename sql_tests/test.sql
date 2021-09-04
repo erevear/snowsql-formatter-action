@@ -1,1 +1,6 @@
-SELECT * FROM tbl WHERE i = 3;
+SELECT
+  *
+FROM
+  tbl
+WHERE
+  i = 3;
