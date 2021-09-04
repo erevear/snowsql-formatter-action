@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-sh -c "echo --recursive $GITHUB_WORKSPACE $*"
+echo --recursive $GITHUB_WORKSPACE $*
 
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
