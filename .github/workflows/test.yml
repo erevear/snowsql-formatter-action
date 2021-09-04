@@ -22,11 +22,12 @@ jobs:
           token: ${{ github.token }}
       - name: Install npm
         run: |
-          sudo apt-get update \
-          && sudo apt-get install -y curl \
-          && sudo curl -sL https://deb.nodesource.com/setup_14.x | bash - \
-          && sudo apt-get install -y nodejs \
-          && sudo scurl -L https://www.npmjs.com/install.sh | sh
+          sudo -s \
+          && apt-get update \
+          && apt-get install -y curl \
+          && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+          && apt-get install -y nodejs \
+          &&  scurl -L https://www.npmjs.com/install.sh | sh
       - name: install snowsql tool
         run: |
           npm install snowsql-formatter-cli -g
