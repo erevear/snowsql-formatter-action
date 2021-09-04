@@ -6,7 +6,7 @@ echo ${INPUT_DIRECTORY:-'.'}
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
 for file in `find . -name '*.sql'`; do
-    echo "running"
+    echo "running first"
     echo $file
     hello $file -o $file
 done 
