@@ -29,7 +29,7 @@ jobs:
           && scurl -L https://www.npmjs.com/install.sh | sudo sh
       - name: install snowsql tool
         run: |
-          npm install snowsql-formatter-cli -g
+          npm install snowsql-formatter-cli
       - name: Testing
         uses: evarevear/snowsql-formatter-action@main
       - name: WHY
