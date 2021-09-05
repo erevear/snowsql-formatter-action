@@ -5,15 +5,21 @@ set -e
 # FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
-regex="( \(|\()"
-for file in `find . -name '*.sql'`; do
-    if [[ $file =~ $regex ]]; then
-        echo "invalid filename: " $file
-    else
-        echo "Formatting "  $file
-        snowsql-formatter $file -o  $file
-    fi 
-done 
+
+# regex="( \(|\()"
+# for file in `find . -name '*.sql'`; do
+#     if [[ $file =~ $regex ]]; then
+#         echo "invalid filename: " $file
+#     else
+#         echo "Formatting "  $file
+#         snowsql-formatter $file -o  $file
+#     fi 
+# done 
+
+find . -type f -name '*.*' -print0 | 
+while IFS= read -r -d '' file; do
+    printf '%s\n' "$file"
+done
 
 # for file in `find ./ -iname '*.sql' -type f`; do
 #     echo "running"
