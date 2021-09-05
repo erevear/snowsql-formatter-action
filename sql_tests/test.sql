@@ -2,4 +2,5 @@ SELECT
   *
 FROM
   tbl
-WHERE i = 3;
+WHERE
+  i = 3;
