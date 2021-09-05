@@ -9,6 +9,9 @@ for file in `find . -name '*.sql'`; do
     if [[ $file !=  "("* ]]; then
         echo "Formatting "  $file
         snowsql-formatter $file -o  $file
+    else
+        echo "invalid filename"
+    fi 
 done 
 
 # for file in `find ./ -iname '*.sql' -type f`; do
