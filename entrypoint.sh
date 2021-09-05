@@ -13,7 +13,7 @@ done
 
 for file in `find ./ -iname '*.sql' -type f`; do
     echo "running"
-    echo $file -o $file
+    echo "'" + $file + "'" -o  "'" + $file + "'"
     # hello $file -o $file
 done
 
