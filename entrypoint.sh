@@ -5,12 +5,13 @@ set -e
 # FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
+regext = "\("
 for file in `find . -name '*.sql'`; do
-    if [[ $file !=  "("* ]]; then
+    if [[ $file =~  regex ]]; then
+        echo "invalid filename"
+    else
         echo "Formatting "  $file
         snowsql-formatter $file -o  $file
-    else
-        echo "invalid filename"
     fi 
 done 
 
