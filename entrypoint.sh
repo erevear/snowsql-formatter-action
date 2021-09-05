@@ -8,7 +8,7 @@ set -e
 regex="( \(|\()"
 for file in `find . -name '*.sql'`; do
     if [[ $file =~ $regex ]]; then
-        echo "invalid filename"
+        echo "invalid filename: " $file
     else
         echo "Formatting "  $file
         snowsql-formatter $file -o  $file
