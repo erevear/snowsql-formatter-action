@@ -6,9 +6,9 @@ set -e
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
 for file in `find . -name '*.sql'`; do
-    echo "Formatting "  $file
-    filename=$(printf '%q' "$(basename "$file" .sql)")
-    snowsql-formatter $filename -o  $filename
+    if [[ $file !=  "("* ]]; then
+        echo "Formatting "  $file
+        snowsql-formatter $file -o  $file
 done 
 
 # for file in `find ./ -iname '*.sql' -type f`; do
