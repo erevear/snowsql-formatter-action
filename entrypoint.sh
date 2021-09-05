@@ -5,7 +5,7 @@ set -e
 # FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
-regex="\("
+regex="( \(|\()"
 for file in `find . -name '*.sql'`; do
     if [[ $file =~ $regex ]]; then
         echo "invalid filename"
