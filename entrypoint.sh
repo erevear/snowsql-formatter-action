@@ -16,9 +16,10 @@ set -e
 #     fi 
 # done 
 
-find . -type f -name '*.*' -print0 | 
+find . -type f -name '*.sql*' -print0 | 
 while IFS= read -r -d '' file; do
     printf '%s\n' "$file"
+    snowsql-formatter $file -o  $file
 done
 
 # for file in `find ./ -iname '*.sql' -type f`; do
