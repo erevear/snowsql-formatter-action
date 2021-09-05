@@ -6,7 +6,7 @@ set -e
 # bash -c "sql-formatter -h"
 # bash -c "hello test.sql"
 
-# regex="( \(|\()"
+regex="( \(|\()"
 # for file in `find . -name '*.sql'`; do
 #     if [[ $file =~ $regex ]]; then
 #         echo "invalid filename: " $file
@@ -18,8 +18,12 @@ set -e
 
 find . -type f -name '*.sql*' -print0 | 
 while IFS= read -r -d '' file; do
-    printf '%s\n' "$file"
-    snowsql-formatter $file -o  $file
+     if [[ $file =~ $regex ]]; then
+        echo "invalid filename: " $file
+    else
+        printf '%s\n' "$file"
+        snowsql-formatter $file -o  $file
+    fi
 done
 
 # for file in `find ./ -iname '*.sql' -type f`; do
