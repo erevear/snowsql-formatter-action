@@ -8,7 +8,7 @@ echo ${INPUT_DIRECTORY:-'.'}
 for file in `find . -name '*.sql'`; do
     echo "running first"
     echo $file
-    hello $file -o $file
+    snowsql-formatter $file -o $file
 done 
 
 for file in `find ./ -iname '*.sql' -type f`; do
