@@ -10,17 +10,14 @@ RUN apt-get update \
 
 WORKDIR /usr/app
 
+# Install formatter from NPS
 RUN npm install snowsql-formatter-cli -g
 
-RUN npm install sql-formatter -g
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
 
 # change permission to execute the script and
 RUN chmod +x /entrypoint.sh
-
-RUN echo 'WHAT IS HAPPENINIG'
-
 
 # file to execute when the docker container starts up
 ENTRYPOINT ["/entrypoint.sh"]

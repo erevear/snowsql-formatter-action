@@ -1,5 +1,1 @@
-SELECT
-  *
-FROM
-  tbl
-WHERE i = 3;
+SELECT CURRENT_TIMESTAMP() from time_stamps where time = '2021-09-09';
