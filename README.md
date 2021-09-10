@@ -1,5 +1,6 @@
 # Reformat Snowsql
-Reformats SQL with SnowSQL specific syntaxes, using the [Snowsql-formatter](https://github.com/Snowflake-Labs/snowsql-formatter).
+Reformats SQL with SnowSQL specific syntaxes, using the [Snowsql-formatter](https://github.com/Snowflake-Labs/snowsql-formatter), a version of the [SQL-Formatter](https://github.com/zeroturnaround/sql-formatter) with specifications for Snowflake.
+
 
 # Usage
 1. Checkout the action on the main branch: evarevear/snowsql-formatter-action@main
