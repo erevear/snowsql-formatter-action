@@ -4,3 +4,6 @@ description: 'Format snowflake sql on push to repository'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: align-left
+  color: green
