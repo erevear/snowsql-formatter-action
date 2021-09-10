@@ -3,7 +3,7 @@ Reformats SQL with SnowSQL specific syntaxes, using the [Snowsql-formatter](http
 
 
 # Usage
-1. Checkout the action on the main branch: evarevear/snowsql-formatter-action@main
+1. Checkout the action on the main branch: erevear/snowsql-formatter-action@main
 2. Commit files
 on: [push]
 
