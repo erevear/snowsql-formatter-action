@@ -17,7 +17,7 @@ on: [push]
           repository: ${{ github.repository }}
           token: ${{ github.token }}
       - name: Testing
-        uses: evarevear/snowsql-formatter-action@main
+        uses: erevear/snowsql-formatter-action@main
       - name: Commit files
         run: |
           git config --local user.email "<githubusername>@users.noreply.github.com"
